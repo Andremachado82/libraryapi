@@ -8,6 +8,9 @@ import com.cursojava21.libraryapi.model.Autor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+import java.util.UUID;
+
 @Service
 @RequiredArgsConstructor
 public class AutorService {
@@ -21,5 +24,10 @@ public class AutorService {
         Autor saved = autorRepository.save(autor);
 
         return mapper.toResponseDTO(saved);
+    }
+
+    public AutorResponseDTO getAutorPorId(UUID id) {
+        Optional<Autor> autor = autorRepository.findById(id);
+        return autor.map(mapper::toResponseDTO).orElse(null);
     }
 }
