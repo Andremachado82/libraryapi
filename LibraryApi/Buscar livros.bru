@@ -1,0 +1,24 @@
+meta {
+  name: Buscar livros
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://localhost:8080/livros
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~isbn: 1568975
+  ~titulo: Harry
+  ~nomeAutor: Alice
+  ~genero: fantasia
+  ~anoPublicacao: 2021
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

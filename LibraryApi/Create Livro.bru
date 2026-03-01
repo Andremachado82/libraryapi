@@ -1,0 +1,27 @@
+meta {
+  name: Create Livro
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:8080/livros
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "isbn": "1568975",
+    "titulo": "Jaspion",
+    "dataPublicacao": "2020-05-10",
+    "genero": "FICCAO",
+    "preco": 12.0,
+    "idAutor" : "1ac672cb-e1ad-4952-bb06-aa8528b2e728"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

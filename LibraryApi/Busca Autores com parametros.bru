@@ -1,0 +1,21 @@
+meta {
+  name: Busca Autores com parametros
+  type: http
+  seq: 7
+}
+
+get {
+  url: http:localhost:8080/autores?nome=Maria&nacionalidade=brasileiro
+  body: none
+  auth: inherit
+}
+
+params:query {
+  nome: Maria
+  nacionalidade: brasileiro
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

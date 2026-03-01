@@ -1,4 +1,4 @@
-package com.cursojava21.libraryapi.mapper;
+package com.cursojava21.libraryapi.mappers;
 
 import com.cursojava21.libraryapi.dto.AutorRequestDTO;
 import com.cursojava21.libraryapi.dto.AutorResponseDTO;
@@ -16,11 +16,17 @@ public interface AutorMapper {
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "livros", ignore = true)
+    @Mapping(target = "dataCadastro", ignore = true)
+    @Mapping(target = "dataAtualizacao", ignore = true)
+    @Mapping(target = "idUsuario", ignore = true)
     Autor toEntity(AutorRequestDTO dto);
 
     AutorResponseDTO toResponseDTO(Autor autor);
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "livros", ignore = true)
+    @Mapping(target = "dataCadastro", ignore = true)
+    @Mapping(target = "dataAtualizacao", ignore = true)
+    @Mapping(target = "idUsuario", ignore = true)
     void updateEntityFromDTO(AutorRequestDTO autorRequestDTO, @MappingTarget Autor autorEntity);
 }

@@ -1,0 +1,16 @@
+meta {
+  name: Buscar livro por ID
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://localhost:8080/livros/446effa5-0f7e-49ea-9ecc-d44944758118
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

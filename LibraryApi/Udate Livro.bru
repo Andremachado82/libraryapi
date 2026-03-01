@@ -1,0 +1,27 @@
+meta {
+  name: Udate Livro
+  type: http
+  seq: 12
+}
+
+put {
+  url: http://localhost:8080/livros/5c8625e5-df40-45b6-bd0a-f16b6921cb7b
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "isbn": "9781234567897",
+    "titulo": "Pânico na TV",
+    "dataPublicacao": "2021-05-10",
+    "genero": "TERROR",
+    "preco": 12.00,
+    "idAutor" : "67201568-201b-486b-853a-88436a0b5e63"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

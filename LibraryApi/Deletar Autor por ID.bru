@@ -1,0 +1,16 @@
+meta {
+  name: Deletar Autor por ID
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http:localhost:8080/autores/0d20b405-68a0-48d9-b8c6-0837e286dd7a
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Deletar livro por ID
+  type: http
+  seq: 11
+}
+
+delete {
+  url: http:localhost:8080/livros/5c8625e5-df40-45b6-bd0a-f16b6921cb7b
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
